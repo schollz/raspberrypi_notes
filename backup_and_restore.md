@@ -2,19 +2,21 @@
 
 First create a directory on the Linux root system thats available to users to add/restore from, but seperate from all the other file systems.
 
+```bash
 sudo mkdir /backup
 sudo usermod -a -G users USERNAME
 sudo chown root:users /backup
 sudo chmod 775 /backup
 mkdir /backup/2015
-
+```
 
 # Backup
 
-Here I use rsync to backup each folder individually. Note: do not backup 'proc' 'lost+found' 'backup' 'mnt' 'sys' 'dev' 'media'
+Here I use rsync to backup each folder individually. Note: do not backup 'proc' 'lost+found' 'backup' 'mnt' 'sys' 'dev' 'media'. The ```--delete``` command for rsync will delete stuff, so make sure to use ```--dry-run``` if you're worried about deleting stuff.
 
 ## Backup locally
 
+```bash
 rsync -avz --delete /baselayers /backup/2015/
 rsync -avz --delete /bin /backup/2015/
 rsync -avz --delete /boot /backup/2015/
@@ -33,6 +35,7 @@ rsync -avz --delete /usr /backup/2015/
 rsync -avz --delete /var /backup/2015/
 rsync -avz --delete /vmlinuz /backup/2015/
 rsync -avz --delete /www /backup/2015/
+```
 
 ## Backup local directory to computer on network through SSH
 
