@@ -39,7 +39,9 @@ rsync -avz --delete /www /backup/2015/
 
 ## Backup local directory to computer on network through SSH
 
-rsync -avze ssh --delete /example_directory bitnami@ips.colab.duke.edu:/backup/2015/
+```bash
+rsync -avze ssh --delete /example_directory USER@IPADDRESS:/backup/2015/
+```
 
 ## Compress
 
