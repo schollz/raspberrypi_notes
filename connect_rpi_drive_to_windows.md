@@ -68,7 +68,7 @@ THen set the password using ```sudo smbpasswd -a pi``` and just use your current
 
 
 
-## Windows
+## 4. Open drive in Windows
 
 Note your rpi name, for instance my bash is
 
