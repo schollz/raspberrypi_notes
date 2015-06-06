@@ -1,3 +1,8 @@
+//export GOROOT=/usr/local/go 
+//export GOPATH=$HOME/go 
+//export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+//go get github.com/kidoman/embd
+//go run gpio.go
 package main
 
 import (
