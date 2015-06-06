@@ -9,3 +9,5 @@ I decided to test the two fastest languages - Python and Native C - to see how f
 | [Python](https://github.com/schollz/raspberrypi_notes/blob/master/gpio_tests/writing/gpio_write.py) |  06/06/2015 |  69 kHz |  
 |  [Go](https://github.com/schollz/raspberrypi_notes/blob/master/gpio_tests/writing/gpio_write.go) |   06/06/2015 |  174 kHz |   
 | [C](https://github.com/schollz/raspberrypi_notes/blob/master/gpio_tests/writing/gpio_write.c)  |  06/06/2015  | 15 MHz  |  
+
+My results for Python and C are similar to what was [already investigated](http://codeandlife.com/2012/07/03/benchmarking-raspberry-pi-gpio-speed/), but the Go result is new. The Go result is pretty unexpected - it is very fast thanks to a [great library](https://github.com/stianeikeland/go-rpio) by [Stian Eikeland](https://github.com/stianeikeland).
