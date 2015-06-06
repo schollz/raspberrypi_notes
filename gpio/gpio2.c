@@ -5,9 +5,9 @@
 
 #include <pigpio.h>
 
-/*
+/* 31Mhz
 2014-08-20
-
+http://abyz.co.uk/rpi/pigpio/download.html
 gcc -o freq_count_2 freq_count_2.c -lpigpio -lpthread
 $ sudo ./freq_count_2  4 7 8
 
