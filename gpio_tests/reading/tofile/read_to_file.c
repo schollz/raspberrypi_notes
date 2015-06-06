@@ -275,17 +275,7 @@ main()
 
   i=5; // which pin
 
-	/*
-	FILE *pFile;
-	pFile = fopen("data.m","a");
-	for (j=0;j<5000000;j++) {  
-	//j++;
-	bitsRead[j]=gpioRead(i);
-	//fprintf(pFile,"%d\n",gpioRead(i)); 
-	//printf("gpio=%d tick=%u mode=%d level=%d-%d\n",i, gpioTick(), gpioGetMode(i), gpioRead(i),j);
-	}
-	fclose(pFile);
-	*/
+
 	FILE *f1 = fopen("client.data", "wb"); 
 	int total;
 	total = 0;
