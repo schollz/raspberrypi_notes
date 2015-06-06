@@ -237,22 +237,20 @@ int main(int argc, char *argv[])
    for (i=0; i<g_num_gpios; i++) gpioSetMode(g_gpio[i], mode);
    int j;
    j=0;
-   while (1)
-   {
-        j++;
+   for (j=0;j<100000000;j++){
       for (i=0; i<g_num_gpios; i++) count[i] = g_pulse_count[i];
-
       g_reset_counts = 1;
-
-      for (i=0; i<g_num_gpios; i++)
+/*
+    for (i=0; i<g_num_gpios; i++)
       {
-         printf(" %d=%d-%d", g_gpio[i], count[i],j);
+        printf(" %d=%d-%d", g_gpio[i], count[i],j);
       }
 
       printf("\n");
-
+*/
  //     gpioDelay(g_opt_r * 100000);
    }
 
    gpioTerminate();
 }
+
