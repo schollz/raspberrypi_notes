@@ -4,7 +4,6 @@
    Public Domain
    http://abyz.co.uk/rpi/pigpio/examples.html
 */
-
 /*
    gcc -o minimal_gpio minimal_gpio.c
    sudo ./minimal_gpio
@@ -115,7 +114,7 @@ void gpioSetPullUpDown(unsigned gpio, unsigned pud)
    *(gpioReg + GPPUDCLK0 + PI_BANK) = PI_BIT;
 
    usleep(20);
-  
+
    *(gpioReg + GPPUD) = 0;
 
    *(gpioReg + GPPUDCLK0 + PI_BANK) = 0;
@@ -263,14 +262,16 @@ int gpioInitialise(void)
 
 main()
 {
-   int i;
+int j;
+int i;
 
    if (gpioInitialise() < 0) return 1;
 
-   for (i=0; i<54; i++)
-   {
-      printf("gpio=%d tick=%u mode=%d level=%d\n",
-         i, gpioTick(), gpioGetMode(i), gpioRead(i));
+   i=4;
+   j=0;
+   while(1){
+      j++;
+      printf("gpio=%d tick=%u mode=%d level=%d-%d\n",i, gpioTick(), gpioGetMode(i), gpioRead(i),j);
    }
 }
 
