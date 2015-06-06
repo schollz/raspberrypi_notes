@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# 1.7 khz
 from time import sleep           # Allows us to call the sleep function to slow down our loop
 import RPi.GPIO as GPIO           # Allows us to call our GPIO pins and names it just GPIO
 
