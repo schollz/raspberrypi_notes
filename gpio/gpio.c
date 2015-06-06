@@ -1,4 +1,4 @@
-/*
+/* 8khz
    minimal_gpio.c
    2015-02-10
    Public Domain
