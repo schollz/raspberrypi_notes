@@ -269,9 +269,11 @@ int i;
 
    i=4;
    j=0;
-   while(1){
-      j++;
-      printf("gpio=%d tick=%u mode=%d level=%d-%d\n",i, gpioTick(), gpioGetMode(i), gpioRead(i),j);
-   }
+for (j=0;j<100000000;j++) {
+//j++;
+i=gpioRead(i);
+//printf("gpio=%d tick=%u mode=%d level=%d-%d\n",i, gpioTick(), gpioGetMode(i), gpioRead(i),j);
 }
+}
+
 
