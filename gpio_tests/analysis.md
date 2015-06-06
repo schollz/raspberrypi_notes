@@ -6,7 +6,7 @@ All the following tests were done as root in a Raspberry Pi Model B+ using a Jes
 
 ## How fast can you write to GPIO pins for outputing a signal?
 
-I decided to test the two fastest languages - Python and Native C - to see how fast it could be done. Also, I had help to include Go into the mix. Here are the results.
+I decided to test the two fastest languages - Python and Native C - to see how fast it could be done. Also, I included Go in the experiments, which is a language that has not been tested for generating square waves yet. Here are the results.
 
 |Language (linked to code)  | Tested  | Result (cycle rate)  |
 |---|---|---|
