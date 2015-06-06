@@ -16,7 +16,7 @@ I decided to test the two fastest languages - Python and Native C - to see how f
 
 My results for Python and C are similar to what was [already investigated](http://codeandlife.com/2012/07/03/benchmarking-raspberry-pi-gpio-speed/), but the Go result is new! The Go result is pretty unexpected - it is very fast thanks to a [great library](https://github.com/stianeikeland/go-rpio) by [Stian Eikeland](https://github.com/stianeikeland).
 
-## How fast can you read from GPIO pins *to memory?
+## How fast can you read from GPIO pins *to memory*?
 
 Another question is how fast can you read? In this case I want to read a pin many times and store the value in virtual memory so there is no hard-disk retrieval here. I'm going to focus on the two fastest languages - Go and native C. 
 
