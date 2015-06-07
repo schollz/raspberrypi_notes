@@ -33,7 +33,7 @@ These read speeds are effectively the *fastest* you can possibly read. These pro
 
 This experiment is similar to the previous, except that here I use Go and C to compile the individual bits into bytes which are written to disk as a block every 1000 Bytes. The results are surprising:
 
-|Language (linked to code)  | Tested  | Result (read rate)  |
+|Language (linked to code)  | Tested  | Result (read + write-to-disk rate)  |
 |---|---|---|
 |  [Go](https://github.com/schollz/raspberrypi_notes/blob/master/gpio_tests/reading/tofile/read_to_file.go) |   06/06/2015 |  440 kHz |   
 | [C](https://github.com/schollz/raspberrypi_notes/blob/master/gpio_tests/reading/tofile/read_to_file.c)  |  06/06/2015  | 673 kHz  |  
