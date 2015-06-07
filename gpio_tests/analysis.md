@@ -14,18 +14,18 @@ I decided to test the two fastest languages - Python and Native C - to see how f
 |  [Go](https://github.com/schollz/raspberrypi_notes/blob/master/gpio_tests/writing/gpio_write.go) |   06/06/2015 |  174 kHz |   
 | [C](https://github.com/schollz/raspberrypi_notes/blob/master/gpio_tests/writing/gpio_write.c)  |  06/06/2015  | 15 MHz  |  
 
-My results for Python and C are similar to what was [already investigated](http://codeandlife.com/2012/07/03/benchmarking-raspberry-pi-gpio-speed/), but the Go result is new! The Go result is pretty unexpected - it is very fast thanks to a [great library](https://github.com/stianeikeland/go-rpio) by [Stian Eikeland](https://github.com/stianeikeland).
+My results for Python and C are similar to what was [already investigated](http://codeandlife.com/2012/07/03/benchmarking-raspberry-pi-gpio-speed/), but the Go result is new! The Go result is pretty unexpected - it seems to be the fastest language for writing to pins with the exception of C. I think this is thanks to a [great library](https://github.com/stianeikeland/go-rpio) by [Stian Eikeland](https://github.com/stianeikeland).
 
 ## How fast can you read from GPIO pins *to memory*?
 
-Another question is how fast can you read? In this case I want to read a pin many times and store the value in virtual memory so there is no hard-disk retrieval here. I'm going to focus on the two fastest languages - Go and native C. 
+Another question is how fast can you read? In this case I want to read a pin many times and store the value in virtual memory so there is no hard-disk storage here (which may be a bottleneck). I'm going to focus on the two fastest languages - Go and native C. 
 
 |Language (linked to code)  | Tested  | Result (read rate)  |
 |---|---|---|
 |  [Go](https://github.com/schollz/raspberrypi_notes/blob/master/gpio_tests/reading/tovariable/read_in_memory.go) |   06/06/2015 |  1.6 Mhz |   
 | [C](https://github.com/schollz/raspberrypi_notes/blob/master/gpio_tests/reading/tovariable/read_in_memory.c)  |  06/06/2015  | 7.2 MHz  |  
 
-Is reading harder or easier for a program? For C, it actually seems to be harder, as it reads about half the rate it can write a cycle (and the cycle writing is actually two pin changes - so it effectively makes 4 times fewer pin changes!). However, for Go it can read faster than it can write! Go seems like a good alternative to C for reading GPIO pins.  
+Is reading harder or easier than writing for a given language? For C, reading actually seems to be harder, as it reads about half the rate it can write a cycle - so detecting pin changes is 4x slower than writing pin changes. However, **Go can read faster than it can write**! That's pretty unexpected. Go seems like a good alternative to C for reading GPIO pins.  
 
 These read speeds are effectively the *fastest* you can possibly read. These programs read into memory and do nothing with the result. In a practical case you'd want to use the result - most likely by writing it to disk, thus you'll have a bottleneck there immedietly. This brings me to the final question:
 
