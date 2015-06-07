@@ -2,7 +2,7 @@ A good question to ask yourself before using the Raspberry Pi GPIO pins for time
 
 ## The test
 
-All the following tests were done as root in a Raspberry Pi Model B+ using a Jessie build of Raspbian. To calcualte result rates, the commands were run using time (e.g. ```time program```) and the ```real``` time result was used to divide into the total number of cycles or iterations to figure out the resulting rate.
+All the following tests were done as root in a Raspberry Pi Model B+ using a Jessie build of Raspbian (Raspberry Pi Model 2 is generally [2-3 times faster](http://codeandlife.com/2015/03/25/raspberry-pi-2-vs-1-gpio-benchmark/)). To calcualte result rates, the commands were run using time (e.g. ```time program```) and the ```real``` time result was used to divide into the total number of cycles or iterations to figure out the resulting rate.
 
 ## How fast can you write to GPIO pins for outputing a signal?
 
