@@ -42,4 +42,4 @@ Here was the real surprise - Go creeps up on C in terms of speed! Go seems to be
 
 ## TL;DR
 
-Use Go for reading GPIO pins (max rates ~0.4 MHz to disk and 1.6 MHz to memory), and use Native C if you want to write to pins (max cycle rate 15 MHz).
+Use Go for reading GPIO pins because its about as fast as C and a bit easier to code in, but use C if you want to write to pins (max cycle rate 15 MHz).
